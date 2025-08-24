@@ -15,3 +15,10 @@ TEST(BowlingGameTest, ThrowAndAddScore) {
     game.throwBall(5);
     EXPECT_EQ(game.getScore(), 5);
 }
+
+TEST(BowlingGameTest, InvalidPinsCount) {
+    BowlingGame game;
+    game.throwBall(5);
+    game.throwBall(11);
+    EXPECT_EQ(game.getScore(), 5);
+}

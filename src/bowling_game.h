@@ -8,8 +8,6 @@ class BowlingGame {
         void throwBall(int pins);
     private:
         int score;
-
-
 };
 
 #endif
