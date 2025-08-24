@@ -9,5 +9,8 @@ int BowlingGame::getScore() const {
 }
 
 void BowlingGame::throwBall(int pins) {
+    if (pins > 10 || pins < 0) {
+        return;
+    }
     score += pins;
 }
