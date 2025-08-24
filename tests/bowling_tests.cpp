@@ -35,3 +35,11 @@ TEST(BowlingGameTest, StrikeTenPointInThrow)  {
     game.throwBall(10);
     EXPECT_EQ(game.getScore(), 10);
 }
+
+TEST(BowlingGameTest, StrikeAddsNextTwoThrows)  {
+    BowlingGame game;
+    game.throwBall(10);
+    game.throwBall(5);
+    game.throwBall(4);
+    EXPECT_EQ(game.getScore(), 28);
+}
