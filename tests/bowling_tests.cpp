@@ -29,3 +29,9 @@ TEST(BowlingGameTest, TwoThrowsInOneFrame)  {
     game.throwBall(4);
     EXPECT_EQ(game.getScore(), 9);
 }
+
+TEST(BowlingGameTest, StrikeTenPointInThrow)  {
+    BowlingGame game;
+    game.throwBall(10);
+    EXPECT_EQ(game.getScore(), 10);
+}
