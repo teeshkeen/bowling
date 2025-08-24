@@ -1,9 +1,13 @@
 #include "bowling_game.h"
 
-BowlingGame::BowlingGame() {
+BowlingGame::BowlingGame() : score(0) {
     // empty
 }
 
 int BowlingGame::getScore() const {
-    return 0;
+    return score;
+}
+
+void BowlingGame::throwBall(int pins) {
+    score += pins;
 }

@@ -5,7 +5,9 @@ class BowlingGame {
     public:
         BowlingGame();
         int getScore() const;
-    private: // methods
+        void throwBall(int pins);
+    private:
+        int score;
 
 
 };
