@@ -22,3 +22,10 @@ TEST(BowlingGameTest, InvalidPinsCount) {
     game.throwBall(11);
     EXPECT_EQ(game.getScore(), 5);
 }
+
+TEST(BowlingGameTest, TwoThrowsInOneFrame)  {
+    BowlingGame game;
+    game.throwBall(5);
+    game.throwBall(4);
+    EXPECT_EQ(game.getScore(), 9);
+}
