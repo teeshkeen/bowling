@@ -12,7 +12,9 @@ public:
 private:
   int score;
   bool wasStrike;
+  bool wasSpare;
   int throwsAfterStrike;
+  int throwsAfterSpare;
   int currentFrame;
   int firstThrowInFrame;
   int throwsInCurrentFrame;
