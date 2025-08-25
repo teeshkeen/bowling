@@ -4,16 +4,19 @@
 #include <vector>
 
 class BowlingGame {
-    public:
-        BowlingGame();
-        int getScore() const;
-        void throwBall(int pins);
-    private:
-        int score;
-        bool wasStrike;
-        int throwsAfterStrike;
-        int currentFrame;
-        std::vector<int> frameScores;
+public:
+  BowlingGame();
+  int getScore() const;
+  void throwBall(int pins);
+
+private:
+  int score;
+  bool wasStrike;
+  int throwsAfterStrike;
+  int currentFrame;
+  int firstThrowInFrame;
+  int throwsInCurrentFrame;
+  std::vector<int> frameScores;
 };
 
 #endif

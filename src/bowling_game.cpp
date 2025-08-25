@@ -1,6 +1,8 @@
 #include "bowling_game.h"
 
-BowlingGame::BowlingGame() : score(0) {
+BowlingGame::BowlingGame()
+    : score(0), wasStrike(false), throwsAfterStrike(0), currentFrame(0),
+      firstThrowInFrame(0), throwsInCurrentFrame(0) {
   // empty
 }
 
@@ -10,6 +12,20 @@ void BowlingGame::throwBall(int pins) {
   if (pins > 10 || pins < 0) {
     return;
   }
+  if (throwsInCurrentFrame == 0) {
+    firstThrowInFrame = pins;
+    throwsInCurrentFrame++;
+
+    if (pins == 10) {
+      currentFrame++;
+      throwsInCurrentFrame = 0;
+      wasStrike = true;
+      throwsAfterStrike = 0;
+    }
+  } else {
+    throwsInCurrentFrame++;
+  }
+
   if (wasStrike) {
     score += pins;
     throwsAfterStrike++;
@@ -19,10 +35,5 @@ void BowlingGame::throwBall(int pins) {
     }
   } else {
     score += pins;
-
-    if (pins == 10) {
-      wasStrike = true;
-      throwsAfterStrike = 0;
-    }
   }
 }
