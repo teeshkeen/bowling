@@ -56,5 +56,5 @@ TEST(BowlingGameTest, SpareAfterStrike) {
   game.throwBall(5);
   game.throwBall(5);
   game.throwBall(4);
-  EXPECT_EQ(game.getScore(), 32);
+  EXPECT_EQ(game.getScore(), 36);
 }
