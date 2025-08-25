@@ -41,3 +41,11 @@ TEST(BowlingGameTest, StrikeAddsNextTwoThrows) {
   game.throwBall(4);
   EXPECT_EQ(game.getScore(), 19);
 }
+
+TEST(BowlingGameTest, SpareAddsNextOneThrow) {
+  BowlingGame game;
+  game.throwBall(5);
+  game.throwBall(5);
+  game.throwBall(4);
+  EXPECT_EQ(game.getScore(), 18);
+}
