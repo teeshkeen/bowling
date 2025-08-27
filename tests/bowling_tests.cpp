@@ -39,7 +39,7 @@ TEST(BowlingGameTest, StrikeAddsNextTwoThrows) {
   game.throwBall(10);
   game.throwBall(5);
   game.throwBall(4);
-  EXPECT_EQ(game.getScore(), 19);
+  EXPECT_EQ(game.getScore(), 28);
 }
 
 TEST(BowlingGameTest, SpareAddsNextOneThrow) {
@@ -56,5 +56,5 @@ TEST(BowlingGameTest, SpareAfterStrike) {
   game.throwBall(5);
   game.throwBall(5);
   game.throwBall(4);
-  EXPECT_EQ(game.getScore(), 36);
+  EXPECT_EQ(game.getScore(), 34);
 }
