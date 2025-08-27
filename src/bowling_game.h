@@ -8,6 +8,7 @@ public:
   BowlingGame();
   int getScore() const;
   void throwBall(int pins);
+  int calculateScore() const;
 
 private:
   int score;
@@ -19,6 +20,7 @@ private:
   int firstThrowInFrame;
   int throwsInCurrentFrame;
   std::vector<int> frameScores;
+  std::vector<int> throws;
 };
 
 #endif
